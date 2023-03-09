@@ -12,10 +12,12 @@ $API_KEY = "Demo Account API key here";
 
 // GetUser is a basic call that takes no parameters, and just returns the logged in user.
 $Result = CallLacrmApi("GetUser", array());
-// The output comes in a particular format, listed in the docs.
+// The output is a dictionary in a particular format, explained in the docs.
+// Check it out here: https://account.lessannoyingcrm.com/api_docs/v2/Settings_Functions/Users
 echo("GetUser: ".$Result['FirstName'].' '.$Result['LastName'].' ('.$Result['Email'].")\n\n");
 
 // Your turn -- feel free to fill any any function and parameters you want here.
+// Check out the docs: https://account.lessannoyingcrm.com/api_docs/v2
 $FunctionName = "GetNotes";
 $Parameters = array(
 	"DateFilterStart" => "03/01/2023",
