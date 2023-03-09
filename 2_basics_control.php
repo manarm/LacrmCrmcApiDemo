@@ -22,7 +22,7 @@ $x = 1;
 // The code in the brackets will run over and over until the expression in the parens is false.
 echo "Starting the loop.\n";
 while ($x < 5) {
-	echo "Loop: ".$x ."\n";
+	echo "\tLoop: ".$x ."\n";
 	$x = $x + 1;
 }
 echo "All done!\n";

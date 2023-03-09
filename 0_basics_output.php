@@ -16,3 +16,4 @@
 echo "Hey there.\n";
 // This echoes a number.
 echo 42;
+// Note that lines have to end in ';'.
