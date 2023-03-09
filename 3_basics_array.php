@@ -35,4 +35,4 @@ echo "Loop start\n";
 foreach ($Car as $Key => $Value) {
 	echo "\t Key: $Key => Value: $Value\n";
 }
-echo "Loop end.";
+echo "Loop end.\n";
