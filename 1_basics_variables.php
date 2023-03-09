@@ -28,7 +28,7 @@ $x = 1 + 4;
 echo $x;
 echo "\n";
 // You can stick strings together; this is called "concatenation".
-// For some reason, this is done with a "." in php.
+// For some reason, this is done with a "." in php (most languages use +).
 $y = "Wow " . "mom";
 echo "$y"."\n";
 
