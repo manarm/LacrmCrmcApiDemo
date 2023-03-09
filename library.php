@@ -4,7 +4,7 @@
 * Spin up a new demo, create an API key, and paste it in here.
 * Please do NOT use your real credentials! 
 */
-$API_KEY = "";
+$API_KEY = "Demo Account Api Key goes here";
 
 function CallLacrmApi(string $Function, array $Parameters=array()) {
 	global $API_KEY;
@@ -17,10 +17,6 @@ function CallLacrmApi(string $Function, array $Parameters=array()) {
 			"Function" => $Function,
 			"Parameters" => $Parameters
 	);
-
-// LOCAL DEV ONLY
-curl_setopt($CurlHandle, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($CurlHandle, CURLOPT_SSL_VERIFYPEER, 0);
 
 	curl_setopt($CurlHandle, CURLOPT_POSTFIELDS, json_encode($Body));
 	curl_setopt($CurlHandle, CURLOPT_HTTPHEADER, $Headers);
