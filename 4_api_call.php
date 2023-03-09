@@ -4,11 +4,8 @@ include_once('library.php');
 
 /*
 * Now we're actually going to call the LACRM API! All right!
+* The first thing you'll have to do is open 'library.php' and paste in your API key.
 */
-
-// Open a demo account, create an API key, and paste it here.
-// This functions as both a username and a password to the account when using the API.
-$API_KEY = "Demo Account API key here";
 
 // GetUser is a basic call that takes no parameters, and just returns the logged in user.
 $Result = CallLacrmApi("GetUser", array());
@@ -21,7 +18,7 @@ echo("GetUser: ".$Result['FirstName'].' '.$Result['LastName'].' ('.$Result['Emai
 $FunctionName = "GetNotes";
 $Parameters = array(
 	"DateFilterStart" => "03/01/2023",
-	"DateFilterEnd" => "03/31/2023"
+	"DateFilterEnd" => "03/05/2023"
 );
 $Result = CallLacrmApi($FunctionName, $Parameters);
-echo("Output: ".json_encode($Result, JSON_PRETTY_PRINT));
+echo("Output: ".json_encode($Result, JSON_PRETTY_PRINT)); 

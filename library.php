@@ -1,5 +1,11 @@
 <?php
 
+/* 
+* Spin up a new demo, create an API key, and paste it in here.
+* Please do NOT use your real account!! 
+*/
+$API_KEY = "";
+
 function CallLacrmApi(string $Function, array $Parameters=array()) {
 	global $API_KEY;
 	$CurlHandle = curl_init("https://api.lessannoyingcrm.com/v2/");
