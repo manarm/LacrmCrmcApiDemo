@@ -2,7 +2,7 @@
 
 /* 
 * Spin up a new demo, create an API key, and paste it in here.
-* Please do NOT use your real account!! 
+* Please do NOT use your real credentials! 
 */
 $API_KEY = "";
 

@@ -40,6 +40,12 @@ foreach ($Companies as $Company) {
 				'Address' => $Company['Address']
 			));
 
+			// Lets attach a note as well to indicate we updated them using this script.
+			CallLacrmApi('CreateNote', array(
+				'ContactId' => $Contact['ContactId'],
+				'Note' => "Script updated address to match company."
+			));
+
 			// This operator adds a value to the end of a list.
 			$EditedContactIds[] = $Contact['ContactId'];
 		}
