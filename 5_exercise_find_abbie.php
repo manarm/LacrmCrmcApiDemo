@@ -6,9 +6,12 @@ include_once('library.php');
 * Check your results in the CRM.
 */
 
+// You'll need to find this function in the docs and add the correct parameter here.
 $ApiResponse = CallLacrmApi("GetContacts", array(
-	"SearchTerms" => ""
+
 ));
+
+// Can you find how this function structures output in the docs? Why is this line needed? 
 $FirstResult = $ApiResponse['Results'][0];
 echo ($FirstResult['ContactId']);
 

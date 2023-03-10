@@ -19,11 +19,8 @@ $Birthday = '';
 $OriginalBirthday = new DateTime($Birthday);
 $Birthday = date_create($OriginalBirthday->format("2023-m-d"))->format('Y-m-d');
 
-// Fill in these paramters to make the task.
+// Fill the paramters to make the task.
 CallLacrmApi("CreateTask", array(
-	'Name' => '',
-	'DueDate' => '',
-	'Description' => '',
-	'ContactId' => ''
+
 ));
 echo "Success";
