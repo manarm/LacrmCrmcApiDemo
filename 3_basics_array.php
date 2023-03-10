@@ -16,7 +16,7 @@ echo "Element 0: ".$x[0]."\n";
 echo "Array has ".count($x). " things.\n";
 // And there's a special kind of loop, foreach, to access each item in the array:
 echo "Begin loop\n";
-	foreach($x as $ArrayItem) {
+foreach($x as $ArrayItem) {
 	echo "\tArray item: $ArrayItem\n";
 }
 echo "End loop\n";

@@ -13,6 +13,11 @@ $Result = CallLacrmApi("GetUser", array());
 // Check it out here: https://account.lessannoyingcrm.com/api_docs/v2/Settings_Functions/Users
 echo("GetUser: ".$Result['FirstName'].' '.$Result['LastName'].' ('.$Result['Email'].")\n\n");
 
+// Making sure you're using a demo account :)
+if ($Result['Email'] !== 'guestaccount@lessannoyingcrm.com') {
+	throw new Exception("ERROR - please use an API key from a demo account.");
+}
+
 // Your turn -- feel free to fill any any function and parameters you want here.
 // Check out the docs: https://account.lessannoyingcrm.com/api_docs/v2
 $FunctionName = "GetNotes";

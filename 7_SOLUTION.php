@@ -3,11 +3,9 @@
 include_once('library.php');
 
 /*
-* Lets build out a simple script that does a useful action
-* In a real app, we could take user input via  form, but to keep things simple we'll do it all using constants in the code.
-*
-* For this example, we'll see how we could copy company addresses to every contact that works there.
-*/ 
+* This is a fully worked out solution for the last exercise. 
+* Please don't look at it until after we've worked through it together.
+*/
 
 // First, we need to get all the companies in the CRM.
 $CompaniesResult = CallLacrmApi('GetContacts', array(
