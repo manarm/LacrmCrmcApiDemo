@@ -14,6 +14,12 @@ include_once('library.php');
 $ContactId = '';
 $Birthday = '';
 
+if(empty($ContactId) || empty($Birthday)) {
+	throw new Exception("ERROR: no ContactId or Birthday set.");
+}
+echo "ContactId found: ".$ContactId."\n";
+echo "Birthday found: ".$Birthday."\n";
+
 // When you get the birthday from the API, it needs to be reformatted to be provided as a due date. Sad! 
 // Dates are... hard to deal with, so you don't have to do this part.
 $OriginalBirthday = new DateTime($Birthday);
