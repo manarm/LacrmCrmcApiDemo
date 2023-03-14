@@ -39,3 +39,15 @@ function CallLacrmApi(string $Function, array $Parameters=array()) {
 	curl_close($CurlHandle);
 	return $ReturnValue;
 }
+
+// Do some checks.
+if ($API_KEY === 'Demo Account Api Key goes here') {
+	throw new Exception('ERROR - API key not set.');
+} else {
+	$Result = CallLacrmApi("GetUser", array());
+
+	// Making sure you're using a demo account :)
+	if ($Result['Email'] !== 'guestaccount@lessannoyingcrm.com') {
+		throw new Exception("ERROR - please use an API key from a demo account.");
+	}
+}
